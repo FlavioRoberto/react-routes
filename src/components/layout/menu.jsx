@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./menu.css";
 
 const Menu = (props) => {
@@ -6,7 +7,10 @@ const Menu = (props) => {
       <nav>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </nav>
