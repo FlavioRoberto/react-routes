@@ -1,23 +1,21 @@
 import { Link } from "react-router-dom";
+import MenuService from "../../data/services/menu.service";
 import "./menu.css";
 
-const Menu = (props) => {
+const Menu = () => {
+    const routes = new MenuService().getRoutes();
+
+    const routesLi = routes.map((route, i) => {
+        return <li>
+            <Link key={i} to={route.to}>{route.title}</Link>
+        </li>
+    });
+
     return (
         <aside className="menu">
             <nav>
                 <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/param/1">Param #01</Link>
-                    </li>
-                    <li>
-                        <Link to="/param/2">Param #02</Link>
-                    </li>
+                    {routesLi}
                 </ul>
             </nav>
         </aside>
