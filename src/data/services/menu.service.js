@@ -3,6 +3,7 @@ import Param from "../../views/examples/param";
 import Home from "../../views/examples/home";
 import NotFound from "../../views/examples/not-found";
 import UseState from "../../views/examples/use-state";
+import UseEffect from "../../views/examples/use-effect";
 
 export default class MenuService {
 
@@ -36,6 +37,12 @@ export default class MenuService {
             path: "/use-state",
             element: <UseState />,
             to: "/use-state"
+        },
+        {
+            title: "Use effect",
+            path: "/use-effect",
+            element: <UseEffect />,
+            to: "/use-effect"
         },
         {
             title: "Not found",
